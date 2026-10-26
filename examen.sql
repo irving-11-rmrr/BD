@@ -1,0 +1,17 @@
+CREATE TABLE computadoras (
+    id_computadoras INT PRIMARY KEY,
+    CANTIDAD INT,
+    DESCRIPCION VARCHAR2(100),
+    MARCA VARCHAR2(50)
+);
+
+INSERT INTO computadoras VALUES (1,8,'VIEJA','SAMSUNG');
+INSERT INTO computadoras VALUES (2,2,'NUEVA','HP');
+INSERT INTO computadoras VALUES (3,5,'ESCRITORIO','LENOVO');
+INSERT INTO computadoras VALUES (4,12,'PORTATIL','HP');
+INSERT INTO computadoras VALUES (5,9,'NUEVA','ASUS');
+
+SELECT * FROM computadoras;
+SELECT id_computadoras,CANTIDAD FROM computadoras ORDER BY CANTIDAD ASC;
+SELECT MARCA,CANTIDAD FROM computadoras ORDER BY MARCA,CANTIDAD ASC;
+SELECT MARCA FROM computadoras WHERE marca LIKE'%H%';
